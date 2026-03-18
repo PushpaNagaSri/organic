@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Bharathi Organic</title>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .about-image {
+            width: 85%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" class="logo">
+                <i class="ph-fill ph-leaf text-primary"></i>
+                Bharathi
+            </a>
+
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="ph ph-list"></i>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <a href="cart.html" class="cart-icon-wrapper">
+                        <i class="ph ph-shopping-cart" style="font-size: 1.5rem;"></i>
+                        <span class="cart-count" id="cart-badge" style="display: none;">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="bg-soft-yellow" style="padding: var(--spacing-xxl) 0;">
+        <div class="container text-center animate-fade-in">
+            <h1 style="font-size: 3rem; margin-bottom: var(--spacing-sm);">Our Story</h1>
+            <p style="font-size: 1.2rem; color: var(--color-text-light);">Rooted in nature, crafted with care.</p>
+        </div>
+    </header>
+
+    <!-- About Content -->
+    <main class="section">
+        <div class="container">
+            <div class="grid grid-cols-2 gap-xl items-center animate-fade-in delay-200"
+                style="margin-bottom: var(--spacing-xxl);">
+                <div>
+                    <img src="images/process.png"
+                        onerror="this.src='https://placehold.co/800x600/A5D6A7/388E3C?text=Handmade+Process'"
+                        alt="Handmade Organic Process" class="about-image">
+                </div>
+                <div>
+                    <h2 style="font-size: 2.25rem;">The Birth of Bharathi</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: var(--spacing-md); color: var(--color-text-light);">
+                        Bharathi started with a simple vision: to bring people back to nature. In a world filled with
+                        synthetic chemicals and artificial fragrances, we realized the pressing need for pure,
+                        unadulterated skin and home care products.
+                    </p>
+                    <p style="font-size: 1.1rem; color: var(--color-text-light);">
+                        Every product we create is a testament to our commitment to a holistic lifestyle. We carefully
+                        source the finest organic ingredients—from pure saffron to wild-harvested herbs like
+                        Kuppaimeni—to ensure that your skin gets nothing but the best.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-xl items-center animate-fade-in delay-200"
+                style="margin-bottom: var(--spacing-xxl);">
+                <div style="order: 2;">
+                    <img src="images/natural.jpg"
+                        onerror="this.src='https://placehold.co/800x600/FFF9C4/5D4037?text=Natural+Ingredients'"
+                        alt="Natural Ingredients" class="about-image">
+                </div>
+                <div style="order: 1;">
+                    <h2 style="font-size: 2.25rem;">Our Philosophy</h2>
+                    <ul style="list-style: none; padding: 0;">
+                        <li
+                            style="margin-bottom: var(--spacing-md); display: flex; align-items: flex-start; gap: var(--spacing-sm);">
+                            <i class="ph-fill ph-check-circle text-primary"
+                                style="font-size: 1.5rem; margin-top: 3px;"></i>
+                            <div>
+                                <strong>100% Harmful Chemical Free</strong>
+                                <p style="color: var(--color-text-light); margin-top: 4px;">No parabens, no sulfates,
+                                    just Mother Nature's goodness.</p>
+                            </div>
+                        </li>
+                        <li
+                            style="margin-bottom: var(--spacing-md); display: flex; align-items: flex-start; gap: var(--spacing-sm);">
+                            <i class="ph-fill ph-check-circle text-primary"
+                                style="font-size: 1.5rem; margin-top: 3px;"></i>
+                            <div>
+                                <strong>Handmade in Small Batches</strong>
+                                <p style="color: var(--color-text-light); margin-top: 4px;">To preserve the efficacy of
+                                    active ingredients, we ditch mass production.</p>
+                            </div>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: var(--spacing-sm);">
+                            <i class="ph-fill ph-check-circle text-primary"
+                                style="font-size: 1.5rem; margin-top: 3px;"></i>
+                            <div>
+                                <strong>Eco-Conscious</strong>
+                                <p style="color: var(--color-text-light); margin-top: 4px;">From our ingredients to our
+                                    packaging, we strive to leave a minimal footprint on our planet.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <i class="ph-fill ph-leaf"></i> Bharathi
+                    </div>
+                    <p class="footer-desc">Pure Nature, Pure Care. We bring you 100% organic, handmade, and
+                        chemical-free products for your skin and home.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="ph-fill ph-instagram-logo"></i></a>
+                        <a href="#" class="social-link"><i class="ph-fill ph-facebook-logo"></i></a>
+                        <a href="#" class="social-link"><i class="ph-fill ph-twitter-logo"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Shop Products</a></li>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="products.html#soaps">Natural Soaps</a></li>
+                        <li><a href="products.html#creams">Creams & Skincare</a></li>
+                        <li><a href="products.html#haircare">Hair Care</a></li>
+                        <li><a href="products.html#homecare">Home Care</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-links">
+                        <li><i class="ph ph-envelope-simple" style="margin-right: 8px;"></i> hello@bharathi-organic.com
+                        </li>
+                        <li><i class="ph ph-phone" style="margin-right: 8px;"></i> +91 98765 43210</li>
+                        <li><i class="ph ph-map-pin" style="margin-right: 8px;"></i> Nature Valley, Kerala, India</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bharathi Organic Products. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

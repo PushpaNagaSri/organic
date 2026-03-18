@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Bharathi Organic</title>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .category-header {
+            border-bottom: 2px solid var(--color-light-green);
+            padding-bottom: var(--spacing-sm);
+            margin-bottom: var(--spacing-lg);
+            margin-top: var(--spacing-xxl);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" class="logo">
+                <i class="ph-fill ph-leaf text-primary"></i>
+                Bharathi
+            </a>
+
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="ph ph-list"></i>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <a href="cart.html" class="cart-icon-wrapper">
+                        <i class="ph ph-shopping-cart" style="font-size: 1.5rem;"></i>
+                        <span class="cart-count" id="cart-badge" style="display: none;">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="bg-soft-yellow" style="padding: var(--spacing-xxl) 0;">
+        <div class="container text-center animate-fade-in">
+            <h1 style="font-size: 3rem; margin-bottom: var(--spacing-sm);">Our Products</h1>
+            <p style="font-size: 1.2rem; color: var(--color-text-light);">Explore our range of 100% natural,
+                chemical-free creations.</p>
+        </div>
+    </header>
+
+    <!-- Products Content -->
+    <main class="section" style="padding-top: var(--spacing-xl);">
+        <div class="container">
+
+            <!-- Category: Soaps -->
+            <section id="soaps" class="animate-fade-in delay-100">
+                <h2 class="category-header"><i class="ph-fill ph-sparkle text-primary"></i> Natural Soaps</h2>
+                <div class="grid grid-cols-4 gap-lg">
+                    <div class="product-card" data-id="soap-almond" data-price="140" data-category="Soaps">
+                        <div class="product-img-wrapper">
+                            <img src="images/Almond Soap.png"
+                                onerror="this.src='https://placehold.co/400x400/FFF9C4/5D4037?text=Almond+Soap'"
+                                alt="Almond Soap" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Soaps</span>
+                            <h3 class="product-title">Almond Soap</h3>
+                            <p class="product-desc">Deep moisturizing and rich in Vitamin E for soft skin.</p>
+                            <div class="product-footer">
+                                <span class="product-price">₹140</span>
+                                <button class="btn btn-primary add-to-cart-btn" style="padding: 0.5rem 1rem;">Add to
+                                    Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-id="soap-papaya" data-price="120" data-category="Soaps">
+                        <div class="product-img-wrapper">
+                            <span class="product-badge">Best Seller</span>
+                            <img src="images/papaya soap.png"
+                                onerror="this.src='https://placehold.co/400x400/FFF9C4/5D4037?text=Papaya+Soap'"
+                                alt="Papaya Soap" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Soaps</span>
+                            <h3 class="product-title">Papaya Soap</h3>
+                            <p class="product-desc">Brightens skin and gently reduces pigmentation.</p>
+                            <div class="product-footer">
+                                <span class="product-price">₹120</span>
+                                <button class="btn btn-primary add-to-cart-btn" style="padding: 0.5rem 1rem;">Add to
+                                    Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-id="soap-banana" data-price="130" data-category="Soaps">
+                        <div class="product-img-wrapper">
+                            <img src="images/Banana Soap.png"
+                                onerror="this.src='https://placehold.co/400x400/FFF9C4/5D4037?text=Banana+Soap'"
+                                alt="Banana Soap" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Soaps</span>
+                            <h3 class="product-title">Banana Soap</h3>
+                            <p class="product-desc">Extremely hydrating for dry skin, giving an instant glow.</p>
+                            <div class="product-footer">
+                                <span class="product-price">₹130</span>
+                                <button class="btn btn-primary add-to-cart-btn" style="padding: 0.5rem 1rem;">Add to
+                                    Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-id="soap-saffron" data-price="180" data-category="Soaps">
+                        <div class="product-img-wrapper">
+                            <span class="product-badge">Premium</span>
+                            <img src="images/Saffron Soap.png"
+                                onerror="this.src='https://placehold.co/400x400/FFF9C4/5D4037?text=Saffron+Soap'"
+                                alt="Saffron Soap" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Soaps</span>
+                            <h3 class="product-title">Saffron Soap</h3>
+                            <p class="product-desc">Luxurious bathing bar that improves skin tone and texture.</p>
+                            <div class="product-footer">
+                                <span class="product-price">₹180</span>
+                                <button class="btn btn-primary add-to-cart-btn" style="padding: 0.5rem 1rem;">Add to
+                                    Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-id="soap-coffee" data-price="130" data-category="Soaps">
+                        <div class="product-img-wrapper">
+                            <img src="images/coffee soap.jpg"
+                                onerror="this.src='https://placehold.co/400x400/FFF9C4/5D4037?text=Coffee+Soap'"
+                                alt="Coffee Soap" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Soaps</span>
+                            <h3 class="product-title">Coffee Soap</h3>
+                            <p class="product-desc">Excellent exfoliator. Removes dead skin and reduces cellulite.</p>
+                            <div class="product-footer">
+                                <span class="product-price">₹130</span>
+                                <button class="btn btn-primary add-to-cart-btn" style="padding: 0.5rem 1rem;">Add to
+                                    Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-id="soap-kuppaimeni" data-price="130" data-category="Soaps">
+                        <div class="product-img-wrapper">
+                            <img src="images/Kuppaimeni soap.png"
+                                onerror="this.src='https://placehold.co/400x400/FFF9C4/5D4037?text=Kuppaimeni+Soap'"
+                                alt="Kuppaimeni Soap" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Soaps</span>
+                            <h3 class="product-title">Kuppaimeni Soap</h3>
+                            <p class="product-desc">Traditional herb that treats various skin conditions naturally.</p>
+                            <div class="product-footer">
+                                <span class="product-price">₹130</span>
+                                <button class="btn btn-primary add-to-cart-btn" style="padding: 0.5rem 1rem;">Add to
+                                    Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-id="soap-tomato" data-price="120" data-category="Soaps">
+                        <div class="product-img-wrapper">
+                            <span class="product-badge">For Oily Skin</span>
+                            <img src="images/Tomato Soap.png"
+                                onerror="this.src='https://placehold.co/400x400/FFF9C4/5D4037?text=Tomato+Soap'"
+                                alt="Tomato Soap" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Soaps</span>
+                            <h3 class="product-title">Tomato Soap</h3>
+                            <p class="product-desc">Shrinks pores and effectively controls excess oil production.</p>
+                            <div class="product-footer">
+                                <span class="product-price">₹120</span>
+                                <button class="btn btn-primary add-to-cart-btn" style="padding: 0.5rem 1rem;">Add to
+                                    Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Category: Creams & Skincare -->
+            <section id="creams" class="animate-fade-in delay-200">
+                <h2 class="category-header" style="margin-top: var(--spacing-xxl);"><i
+                        class="ph-fill ph-jar text-primary"></i> Creams & Skincare</h2>
+                <div class="grid grid-cols-4 gap-lg">
+                    <div class="product-card" data-id="cream-moisturizer" data-price="250"
+                        data-category="Creams & Skincare">
+                        <div class="product-img-wrapper">
+                            <img src="images/Moisturisor.png"
+                                onerror="this.src='https://placehold.co/400x400/FFF9C4/5D4037?text=Moisturizer'"
+                                alt="Natural Moisturizer" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Creams & Skincare</span>
+                            <h3 class="product-title">Natural Moisturizer</h3>
+                            <p class="product-desc">Lightweight, non-greasy formula that deeply hydrates your skin.</p>
+                            <div class="product-footer">
+                                <span class="product-price">₹250</span>
+                                <button class="btn btn-primary add-to-cart-btn" style="padding: 0.5rem 1rem;">Add to
+                                    Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-id="cream-saffron" data-price="350"
+                        data-category="Creams & Skincare">
+                        <div class="product-img-wrapper">
+                            <img src="images/Saffron Cream.png"
+                                onerror="this.src='https://placehold.co/400x400/FFF9C4/5D4037?text=Saffron+Cream'"
+                                alt="Saffron Cream" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Creams & Skincare</span>
+                            <h3 class="product-title">Saffron Cream</h3>
+                            <p class="product-desc">Rich antioxidant night cream for a natural, glowing complexion.</p>
+                            <div class="product-footer">
+                                <span class="product-price">₹350</span>
+                                <button class="btn btn-primary add-to-cart-btn" style="padding: 0.5rem 1rem;">Add to
+                                    Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Category: Hair Care -->
+            <section id="haircare" class="animate-fade-in delay-300">
+                <h2 class="category-header" style="margin-top: var(--spacing-xxl);"><i
+                        class="ph-fill ph-plant text-primary"></i> Hair Care</h2>
+                <div class="grid grid-cols-4 gap-lg">
+                    <div class="product-card" data-id="hair-shampoo" data-price="280" data-category="Hair Care">
+                        <div class="product-img-wrapper">
+                            <img src="images/Herbal shampoo.png"
+                                onerror="this.src='https://placehold.co/400x400/FFF9C4/5D4037?text=Herbal+Shampoo'"
+                                alt="Herbal Shampoo" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Hair Care</span>
+                            <h3 class="product-title">Herbal Shampoo</h3>
+                            <p class="product-desc">Strengthens roots, reduces dandruff, and prevents hair fall with
+                                traditional herbal extracts.</p>
+                            <div class="product-footer">
+                                <span class="product-price">₹280</span>
+                                <button class="btn btn-primary add-to-cart-btn" style="padding: 0.5rem 1rem;">Add to
+                                    Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Category: Home Care -->
+            <section id="homecare" class="animate-fade-in delay-300">
+                <h2 class="category-header" style="margin-top: var(--spacing-xxl);"><i
+                        class="ph-fill ph-house text-primary"></i> Home Care</h2>
+                <div class="grid grid-cols-4 gap-lg">
+                    <div class="product-card" data-id="home-dishwash" data-price="110" data-category="Home Care">
+                        <div class="product-img-wrapper">
+                            <img src="images/Dishwashing.png"
+                                onerror="this.src='https://placehold.co/400x400/FFF9C4/5D4037?text=Dishwash+Liquid'"
+                                alt="Dishwashing Liquid" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Home Care</span>
+                            <h3 class="product-title">Organic Dishwashing Liquid</h3>
+                            <p class="product-desc">Tough on grease but gentle on your hands. Bio-degradable formula.
+                            </p>
+                            <div class="product-footer">
+                                <span class="product-price">₹110</span>
+                                <button class="btn btn-primary add-to-cart-btn" style="padding: 0.5rem 1rem;">Add to
+                                    Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <i class="ph-fill ph-leaf"></i> Bharathi
+                    </div>
+                    <p class="footer-desc">Pure Nature, Pure Care. We bring you 100% organic, handmade, and
+                        chemical-free products for your skin and home.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="ph-fill ph-instagram-logo"></i></a>
+                        <a href="#" class="social-link"><i class="ph-fill ph-facebook-logo"></i></a>
+                        <a href="#" class="social-link"><i class="ph-fill ph-twitter-logo"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Shop Products</a></li>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="products.html#soaps">Natural Soaps</a></li>
+                        <li><a href="products.html#creams">Creams & Skincare</a></li>
+                        <li><a href="products.html#haircare">Hair Care</a></li>
+                        <li><a href="products.html#homecare">Home Care</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-links">
+                        <li><i class="ph ph-envelope-simple" style="margin-right: 8px;"></i> hello@bharathi-organic.com
+                        </li>
+                        <li><i class="ph ph-phone" style="margin-right: 8px;"></i> +91 98765 43210</li>
+                        <li><i class="ph ph-map-pin" style="margin-right: 8px;"></i> Nature Valley, Kerala, India</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bharathi Organic Products. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

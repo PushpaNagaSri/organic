@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Bharathi Organic</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .contact-card {
+            background-color: var(--color-white);
+            padding: var(--spacing-xl);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        
+        .form-group {
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: var(--spacing-xs);
+            font-weight: 500;
+            color: var(--color-earthy-brown);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--color-primary-green);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--color-light-green);
+            color: var(--color-dark-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" class="logo">
+                <i class="ph-fill ph-leaf text-primary"></i>
+                Bharathi
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="ph ph-list"></i>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <a href="cart.html" class="cart-icon-wrapper">
+                        <i class="ph ph-shopping-cart" style="font-size: 1.5rem;"></i>
+                        <span class="cart-count" id="cart-badge" style="display: none;">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="bg-soft-yellow" style="padding: var(--spacing-xxl) 0;">
+        <div class="container text-center animate-fade-in">
+            <h1 style="font-size: 3rem; margin-bottom: var(--spacing-sm);">Get In Touch</h1>
+            <p style="font-size: 1.2rem; color: var(--color-text-light);">We'd love to hear from you. Reach out with any questions or feedback.</p>
+        </div>
+    </header>
+
+    <!-- Contact Content -->
+    <main class="section">
+        <div class="container">
+            <div class="grid grid-cols-2 gap-xl animate-fade-in delay-100">
+                
+                <!-- Contact Information -->
+                <div>
+                    <h2 style="font-size: 2rem; margin-bottom: var(--spacing-xl);">Contact Information</h2>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon"><i class="ph-fill ph-map-pin"></i></div>
+                        <div>
+                            <h3 style="margin-bottom: 4px; font-size: 1.25rem;">Our Location</h3>
+                            <p style="color: var(--color-text-light);">Nature Valley, Kerala<br>India, 682001</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon"><i class="ph-fill ph-phone"></i></div>
+                        <div>
+                            <h3 style="margin-bottom: 4px; font-size: 1.25rem;">Phone Number</h3>
+                            <p style="color: var(--color-text-light);">+91 98765 43210<br>Mon-Fri, 9am to 6pm</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon"><i class="ph-fill ph-envelope"></i></div>
+                        <div>
+                            <h3 style="margin-bottom: 4px; font-size: 1.25rem;">Email Address</h3>
+                            <p style="color: var(--color-text-light);">hello@bharathi-organic.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-card">
+                    <h3 style="font-size: 1.5rem; margin-bottom: var(--spacing-lg);">Send us a Message</h3>
+                    <form id="contact-form" onsubmit="event.preventDefault(); window.cartManager.showToast('Message sent successfully!'); this.reset();">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" class="form-control" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" id="subject" class="form-control" placeholder="How can we help?">
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" class="form-control" placeholder="Your message here..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <i class="ph-fill ph-leaf"></i> Bharathi
+                    </div>
+                    <p class="footer-desc">Pure Nature, Pure Care. We bring you 100% organic, handmade, and chemical-free products for your skin and home.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="ph-fill ph-instagram-logo"></i></a>
+                        <a href="#" class="social-link"><i class="ph-fill ph-facebook-logo"></i></a>
+                        <a href="#" class="social-link"><i class="ph-fill ph-twitter-logo"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Shop Products</a></li>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="products.html#soaps">Natural Soaps</a></li>
+                        <li><a href="products.html#creams">Creams & Skincare</a></li>
+                        <li><a href="products.html#haircare">Hair Care</a></li>
+                        <li><a href="products.html#homecare">Home Care</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-links">
+                        <li><i class="ph ph-envelope-simple" style="margin-right: 8px;"></i> hello@bharathi-organic.com</li>
+                        <li><i class="ph ph-phone" style="margin-right: 8px;"></i> +91 98765 43210</li>
+                        <li><i class="ph ph-map-pin" style="margin-right: 8px;"></i> Nature Valley, Kerala, India</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bharathi Organic Products. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
